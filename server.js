@@ -16,6 +16,7 @@ app.use(bodyParser.json({ extended: true}));
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use('/', Router);
 
+const HOST = '0.0.0.0';
 const PORT = process.env.PORT || 8080 ;
 
 const USERNAME = process.env.DB_USERNAME;
