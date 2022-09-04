@@ -21,11 +21,9 @@ const PORT = process.env.PORT || 8080 ;
 const USERNAME = process.env.DB_USERNAME;
 const PASSWORD = process.env.DB_PASSWORD;
 
-const URL = process.env.MONGODB_URL || `mongodb://${USERNAME}:${PASSWORD}@ac-aqmzkat-shard-00-00.rv50uhx.mongodb.net:27017,ac-aqmzkat-shard-00-01.rv50uhx.mongodb.net:27017,ac-aqmzkat-shard-00-02.rv50uhx.mongodb.net:27017/?ssl=true&replicaSet=atlas-ccmdut-shard-0&authSource=admin&retryWrites=true&w=majority`;
+const URL = process.env.MONGODB_URI || `mongodb://${USERNAME}:${PASSWORD}@ac-aqmzkat-shard-00-00.rv50uhx.mongodb.net:27017,ac-aqmzkat-shard-00-01.rv50uhx.mongodb.net:27017,ac-aqmzkat-shard-00-02.rv50uhx.mongodb.net:27017/?ssl=true&replicaSet=atlas-ccmdut-shard-0&authSource=admin&retryWrites=true&w=majority`;
 
-
-
-Connection(URL);
+Connection(URI);
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'))
