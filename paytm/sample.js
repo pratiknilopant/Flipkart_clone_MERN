@@ -7,8 +7,8 @@ var paytmParams = {};
 /* Generate Checksum via Array */
 
 /* initialize an array */
-paytmParams["MID"] = "YOUR_MID_HERE";
-paytmParams["ORDERID"] = "YOUR_ORDER_ID_HERE";
+paytmParams["MID"] = "DIY12386817555501617";
+paytmParams["ORDERID"] = "ORDER_ID";
 
 /**
 * Generate checksum by parameters we have
